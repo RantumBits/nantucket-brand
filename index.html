@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nantucket Brand — Nautically-inspired goods, made to order in the USA</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="canonical" href="https://nantucketbrand.com/">
+
+    <!-- Open Graph / SEO -->
+    <meta name="description" content="Nantucket Brand — nautically-inspired apparel & goods for him, her & home. A new chapter is on the way: thoughtfully made, to order, in the USA. Est. 2005.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Nantucket Brand">
+    <meta property="og:title" content="Nantucket Brand — Nautically-inspired goods, made in the USA">
+    <meta property="og:description" content="A new chapter is on the way: thoughtfully made, to order, in the USA. Join the list.">
+    <meta property="og:url" content="https://nantucketbrand.com/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #16314f;
+            --navy-deep: #0e2238;
+            --cream: #f7f3ea;
+            --cream-soft: #efe8d8;
+            --red: #b0463a;       /* faded Nantucket red */
+            --rope: #c9a45e;
+            --ink: #1d2a38;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            color: var(--cream);
+            background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem 1.25rem 1.25rem;
+            position: relative;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* faint rope/coordinate grid texture */
+        body::before {
+            content: "";
+            position: fixed; inset: 0;
+            background-image:
+                linear-gradient(rgba(201,164,94,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201,164,94,0.05) 1px, transparent 1px);
+            background-size: 46px 46px;
+            pointer-events: none;
+        }
+        .wrap { position: relative; z-index: 1; max-width: 560px; }
+
+        .eyebrow {
+            font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase;
+            color: var(--rope); margin-bottom: 1.6rem;
+        }
+        .compass { width: 46px; height: 46px; margin: 0 auto 1.5rem; display: block; color: var(--rope); opacity: 0.9; }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: clamp(2.6rem, 9vw, 4.4rem);
+            line-height: 1.02;
+            letter-spacing: 0.02em;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+        .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: clamp(1.15rem, 3.4vw, 1.5rem);
+            color: var(--cream-soft);
+            margin-bottom: 2.2rem;
+        }
+        .rule {
+            width: 64px; height: 1px; margin: 0 auto 2.2rem;
+            background: linear-gradient(90deg, transparent, var(--rope), transparent);
+        }
+        .lede {
+            font-size: 1.02rem; line-height: 1.7; color: var(--cream-soft);
+            max-width: 440px; margin: 0 auto 2.4rem;
+        }
+        .lede strong { color: #fff; font-weight: 500; }
+
+        form { display: flex; gap: 0.5rem; max-width: 420px; margin: 0 auto 0.85rem; }
+        input[type="email"] {
+            flex: 1; padding: 0.85rem 1rem; border: 1px solid rgba(201,164,94,0.4);
+            background: rgba(255,255,255,0.04); color: #fff; border-radius: 4px;
+            font-size: 0.95rem; font-family: inherit;
+        }
+        input[type="email"]::placeholder { color: rgba(247,243,234,0.5); }
+        input[type="email"]:focus { outline: none; border-color: var(--rope); background: rgba(255,255,255,0.07); }
+        button {
+            padding: 0.85rem 1.4rem; border: none; border-radius: 4px; cursor: pointer;
+            background: var(--red); color: #fff; font-size: 0.9rem; font-weight: 500;
+            letter-spacing: 0.02em; font-family: inherit; transition: background 0.2s, transform 0.1s;
+            white-space: nowrap;
+        }
+        button:hover { background: #c4554a; }
+        button:active { transform: translateY(1px); }
+        .formnote { font-size: 0.78rem; color: rgba(247,243,234,0.55); margin-bottom: 3rem; }
+        .formnote a { color: var(--rope); text-decoration: none; }
+
+        footer {
+            position: relative; z-index: 1;
+            font-size: 0.74rem; letter-spacing: 0.06em; color: rgba(247,243,234,0.5);
+            margin-top: auto; padding-top: 2.5rem;
+        }
+        footer .dot { margin: 0 0.5rem; color: var(--rope); }
+        footer a { color: rgba(247,243,234,0.7); text-decoration: none; border-bottom: 1px solid rgba(201,164,94,0.3); }
+        footer a:hover { color: #fff; }
+
+        @media (max-width: 460px) {
+            form { flex-direction: column; }
+            button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <p class="eyebrow">Nantucket, MA · Est. 2005</p>
+
+        <!-- simple compass rose -->
+        <svg class="compass" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="50" cy="50" r="34" stroke="currentColor" stroke-width="0.75" opacity="0.5"/>
+            <path d="M50 8 L57 50 L50 92 L43 50 Z" fill="currentColor" opacity="0.85"/>
+            <path d="M8 50 L50 43 L92 50 L50 57 Z" fill="currentColor" opacity="0.4"/>
+            <circle cx="50" cy="50" r="3" fill="currentColor"/>
+        </svg>
+
+        <h1>Nantucket Brand</h1>
+        <p class="tagline">Nautically inspired — for him, her &amp; home.</p>
+
+        <div class="rule"></div>
+
+        <p class="lede">
+            A new chapter is on the way: <strong>thoughtfully made, to order, in the USA.</strong>
+            Classic, casually sophisticated goods with a Nantucket soul — no overproduction,
+            no waste, made when you order it.
+        </p>
+
+        <!-- Waitlist. Swap the action for your own Formspree/Buttondown endpoint to go live.
+             Until then it falls back to a mailto. -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+            <button type="submit">Join the list</button>
+        </form>
+        <p class="formnote">
+            Be first to know when we set sail. No spam — just the launch.
+            <br>Or email <a href="mailto:hello@nantucketbrand.com">hello@nantucketbrand.com</a>.
+        </p>
+    </div>
+
+    <footer>
+        Nantucket Brand <span class="dot">·</span> Made in the USA <span class="dot">·</span>
+        A brand by <a href="https://andrewmaury.com">Andrew Maury</a>
+    </footer>
+</body>
+</html>
