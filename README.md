@@ -9,8 +9,8 @@ collects a waitlist for the future made-to-order, made-in-USA line.
 > disambiguation only).
 
 ## Go live
-1. **Wire the waitlist:** create a free form endpoint (Formspree / Buttondown / Tally)
-   and replace `YOUR_FORM_ID` in `index.html`. Until then the mailto fallback works.
+1. **Waitlist:** ✅ wired to Formspree (`/f/xreweoab`). Signups land in the Formspree inbox;
+   the `mailto:` line is a secondary fallback.
 2. **Create the repo + push** (e.g. `RantumBits/nantucket-brand`), `main` branch.
 3. **Enable Pages:** repo Settings → Pages → Source = `main` / root.
 4. **Custom domain:** set `nantucketbrand.com` (the `CNAME` file is already here) and
